@@ -1,0 +1,9 @@
+{
+    "name":"Efoe Max",
+    "age":17,
+    "address":{
+        "city":"Bokwaongo",
+        "region":"south west"
+    },
+    "hobby":["football", "content creator"]
+}
