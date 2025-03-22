@@ -26,6 +26,28 @@ btnn.addEventListener("click", ()=>{
         document.getElementById("text").innerHTML = output;
     })
 });
+
+let btnnn = document.querySelector(".btnnn");
+btnnn.addEventListener("click", ()=>{
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => res.json())
+    .then((data) => {
+        let output = "<h2>Users Post</h2>";
+        data.forEach(function(info){
+            output += `
+              <ul>
+              <li>ID: ${info.id}</li>
+              <li>Title: ${info.title}</li>
+              <li>Body: ${info.body}</li>
+
+              </ul>
+            `;
+        });
+        document.getElementById("text").innerHTML = output;
+    })
+});
+
+
 // let person = {
 //     name: "efoe Max",
 //     age: 17,
