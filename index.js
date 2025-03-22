@@ -19,10 +19,16 @@ btn.addEventListener("click", ()=>{
 
 let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
-
+let list = document.getElementById("list");
     if(this.readyState == 4 && this.status == 200){
-       let response = xhr.responseText
+       let response = JSON.parse(xhr.responseText);
        console.log(response.people);
+       let output = " ";
+       for(let i = 0; i < response.length; i++){
+        output += "<li>+response.people[i].name</li>";
+       }
+       list.innerHTML = output;
+
     }
 };
 xhr.open("GET", "index.json", true);
