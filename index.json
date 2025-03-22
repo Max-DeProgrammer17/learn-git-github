@@ -1,9 +1,16 @@
 {
-    "name":"Efoe Max",
-    "age":17,
-    "address":{
-        "city":"Bokwaongo",
-        "region":"south west"
+  "people":[
+    {
+        "name":"Efoe",
+        "age":17
     },
-    "hobby":["football", "content creator"]
+    {
+        "name":"Max",
+        "age":16
+    },
+    {
+        "name":"Maxi",
+        "age":15
+    }
+  ]
 }
