@@ -8,6 +8,24 @@ btn.addEventListener("click", ()=>{
     })
 })
 
+
+let btnn = document.querySelector(".btnn");
+btnn.addEventListener("click", ()=>{
+    fetch("index.json")
+    .then((res) => res.json())
+    .then((data) => {
+        let output = "<h2> Users </h2>";
+        data.forEach(function(info){
+            output += `
+              <ul>
+              <li> ${info.name}</li>
+              <li> ${info.age}</li>
+              </ul>
+            `;
+        });
+        document.getElementById("text").innerHTML = output;
+    })
+});
 // let person = {
 //     name: "efoe Max",
 //     age: 17,
