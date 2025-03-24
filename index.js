@@ -87,7 +87,7 @@ notify.addEventListener("click", (e) => {
             new Notification("Hello Welcome On Board", {
                 body: "We are Afrilearn",
                 icon:"icon.png",
-                vibrate: true
+                tag: "working"
             })
         }
     })
