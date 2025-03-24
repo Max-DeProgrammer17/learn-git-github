@@ -84,7 +84,11 @@ let notify = document.querySelector(".notify");
 notify.addEventListener("click", (e) => {
     Notification.requestPermission().then(perm => {
         if(perm === "granted"){
-            new Notification("Hello Welcome On Board")
+            new Notification("Hello Welcome On Board", {
+                body: "We are Afrilearn",
+                icon:"icon.png",
+                vibrate: true
+            })
         }
     })
 })
