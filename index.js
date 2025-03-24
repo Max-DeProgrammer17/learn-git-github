@@ -1,51 +1,51 @@
 "use strict";
-let btn = document.querySelector(".btn");
-btn.addEventListener("click", ()=>{
-    fetch("sample.txt")
-    .then((res) => res.text())
-    .then((data) => {
-        document.getElementById("text").innerHTML = data;
-    })
-})
+// let btn = document.querySelector(".btn");
+// btn.addEventListener("click", ()=>{
+//     fetch("sample.txt")
+//     .then((res) => res.text())
+//     .then((data) => {
+//         document.getElementById("text").innerHTML = data;
+//     })
+// })
 
 
-let btnn = document.querySelector(".btnn");
-btnn.addEventListener("click", ()=>{
-    fetch("index.json")
-    .then((res) => res.json())
-    .then((data) => {
-        let output = "<h2> Users </h2>";
-        data.forEach(function(info){
-            output += `
-              <ul>
-              <li> ${info.name}</li>
-              <li> ${info.age}</li>
-              </ul>
-            `;
-        });
-        document.getElementById("text").innerHTML = output;
-    })
-});
+// let btnn = document.querySelector(".btnn");
+// btnn.addEventListener("click", ()=>{
+//     fetch("index.json")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         let output = "<h2> Users </h2>";
+//         data.forEach(function(info){
+//             output += `
+//               <ul>
+//               <li> ${info.name}</li>
+//               <li> ${info.age}</li>
+//               </ul>
+//             `;
+//         });
+//         document.getElementById("text").innerHTML = output;
+//     })
+// });
 
-let btnnn = document.querySelector(".btnnn");
-btnnn.addEventListener("click", ()=>{
-    fetch("https://jsonplaceholder.typicode.com/posts")
-    .then((res) => res.json())
-    .then((data) => {
-        let output = "<h2>Users Post</h2>";
-        data.forEach(function(info){
-            output += `
-              <ul>
-              <li>ID: ${info.id}</li>
-              <li>Title: ${info.title}</li>
-              <li>Body: ${info.body}</li>
+// let btnnn = document.querySelector(".btnnn");
+// btnnn.addEventListener("click", ()=>{
+//     fetch("https://jsonplaceholder.typicode.com/posts")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         let output = "<h2>Users Post</h2>";
+//         data.forEach(function(info){
+//             output += `
+//               <ul>
+//               <li>ID: ${info.id}</li>
+//               <li>Title: ${info.title}</li>
+//               <li>Body: ${info.body}</li>
 
-              </ul>
-            `;
-        });
-        document.getElementById("text").innerHTML = output;
-    })
-});
+//               </ul>
+//             `;
+//         });
+//         document.getElementById("text").innerHTML = output;
+//     })
+// });
 
 
 // let person = {
@@ -80,3 +80,11 @@ btnnn.addEventListener("click", ()=>{
 // xhr.open("GET", "index.json", true);
 // xhr.send();
 
+let notify = document.querySelector(".notify");
+notify.addEventListener("click", (e) => {
+    Notification.requestPermission().then(perm => {
+        if(perm === "granted"){
+            new Notification("Hello Welcome On Board")
+        }
+    })
+})
