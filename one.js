@@ -1,13 +1,13 @@
 "use strict";
 
-import {default as number} from "./three.js"
-const mul = (a,b) => {
-    return a*b;
+
+const mul = () => {
+  console.log("Multiplication");
 }
 
-const div = (a,b) => {
-    return a/b;
+const div = () => {
+    console.log("Division");
 }
 
-export{mul, div}
-console.log(number());
+export {mul, div};
+
