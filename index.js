@@ -80,15 +80,15 @@
 // xhr.open("GET", "index.json", true);
 // xhr.send();
 
-let notify = document.querySelector(".notify");
-notify.addEventListener("click", (e) => {
-    Notification.requestPermission().then(perm => {
-        if(perm === "granted"){
-            new Notification("Hello Welcome On Board", {
-                body: "We are Afrilearn",
-                icon:"icon.png",
-                tag: "working"
-            })
-        }
-    })
-})
+// let notify = document.querySelector(".notify");
+// notify.addEventListener("click", (e) => {
+//     Notification.requestPermission().then(perm => {
+//         if(perm === "granted"){
+//             new Notification("Hello Welcome On Board", {
+//                 body: "We are Afrilearn",
+//                 icon:"icon.png",
+//                 tag: "working"
+//             })
+//         }
+//     })
+// })
